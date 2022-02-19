@@ -1,0 +1,80 @@
+* {
+    box-sizing:border-box; /*beleszámítson a padding és amrgó a méretekbe - kisebb méretnél megmaradjon a padding, 
+                            mégis kitöltse a méretet*/
+}
+
+header {
+    grid-area: h;
+
+}
+
+nav{
+    grid-area: n;
+}
+
+nav a {
+    text-decoration: none;
+    display:block;
+    color: lightslategray;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+nav a:hover {
+    color:red;
+}
+
+article{
+    grid-area: a;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+footer{
+    grid-area: f;
+}
+
+main{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /*4 egyforma sort csináljon*/
+    grid-template-areas:
+        "h h h h"
+        "n a a a"
+        "f f f f"
+    ;
+    text-align: justify;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+}
+/*Az összes css utn lehet csak beírni!!
+ha van benne max-width, akkor csökkenő sorrendben kell beírni!!*/
+@media screen and (max-width: 600px) {
+    main {
+        background: red;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        background: purple;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "h"
+            "n"
+            "a"
+            "f"
+        ;
+    }
+    /*navigáció li tagjei kerüljenek egymás mellé*/
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
