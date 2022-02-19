@@ -3,6 +3,10 @@
                             mégis kitöltse a méretet*/
 }
 
+main,header,nav,article,footer {
+    padding: 10px;
+    border: 1px solid black;
+}
 header {
     grid-area: h;
 
@@ -30,8 +34,7 @@ nav a:hover {
 
 article{
     grid-area: a;
-    padding: 10px;
-    border: 1px solid black;
+    
 }
 
 footer{
