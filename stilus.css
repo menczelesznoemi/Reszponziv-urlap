@@ -54,6 +54,16 @@ main{
     max-width: 800px;
     margin: auto;
 }
+/*Űrlap formázása*/
+
+#nevek {
+    display: grid;/*egymás mellé kerüljenek?*/
+    grid-template-columns: 100px auto;
+}
+#nevek label {
+    text-align: right;
+    padding: 5px;
+}
 /*Az összes css utn lehet csak beírni!!
 ha van benne max-width, akkor csökkenő sorrendben kell beírni!!*/
 @media screen and (max-width: 600px) {
@@ -78,6 +88,15 @@ ha van benne max-width, akkor csökkenő sorrendben kell beírni!!*/
     nav ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    #nevek {
+        grid-template-columns: auto;
+        font-size: 15pt;
+    }
+    #nevek label {
+        text-align: left;
+        padding: 5px;
     }
     
 }
